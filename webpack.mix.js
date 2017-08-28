@@ -9,7 +9,7 @@ var directory = 'anung-network-ako/www/';
 
 /* ----- Stylesheet ----- */
 mix.styles([
-    'node_modules/bootstrap/dist/css/bootstrap.min.css',   // Bootstrap
+    'node_modules/bootswatch/flatly/bootstrap.min.css',   // Bootswatch/Flatfly
     'src/css/app.css'                                      // App Styles
 ], directory + 'css/app.css');
 

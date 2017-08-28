@@ -22,6 +22,7 @@
   "homepage": "https://github.com/thepirateorange/anung-network-ako#readme",
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "bootswatch": "github:thomaspark/bootswatch#v4",
     "jquery": "^3.2.1",
     "laravel-mix": "^1.4.2",
     "phonegap": "^7.0.0",

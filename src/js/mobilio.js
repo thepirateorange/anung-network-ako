@@ -1,5 +1,11 @@
 var mobilio = {
     
+    options: {
+        standby_message: "YOUR NETWORK IS . . .",
+        error_length: "Too many numbers!",
+        error_unknown: "No results found."
+    },
+    
     analyze: function(input) {
         
         // Sanitize Numeric Input
@@ -130,17 +136,17 @@ var mobilio = {
             
             // Input Exceeded 11 Characters
             case "length":
-                string = "Entered number is too long. Please input a number that is 11 digits or less.";
+                string = this.options.error_length;
                 break;
                 
             // Input Can't Be Found In Database
             case "unknown":
-                string = "No results found for that number.";
+                string = this.options.error_unknown;
                 break;
                 
             // No Input
             default:
-                string = "YOUR NETWORK IS: . . .";
+                string = this.options.standby_message;
             
         }
         

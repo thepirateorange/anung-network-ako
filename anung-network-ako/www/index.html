@@ -10,36 +10,52 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/app.css" />
 </head>
-<body>
+<body class="bg-inverse">
     
     <!-- App -->
     <div id="app">
         
         <!-- Container -->
-        <div class="container">
-            <br />
-            
-            <div class="text-center">
-            <h1>{{ app_title }}</h1>
-            </div>
-            
+        <div class="container-fluid">
             <div class="card">
                 <div class="card-block">
-                    {{ message }}
+                    <h1 class="text-center">{{ app_title }}</h1>
+                    <p class="text-center">{{ app_desc }}</p>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" v-model="mobile_number" v-bind:placeholder="mobile_placeholder" style="text-align: center" />    
+                    </div>
                     
-                    <hr />
-                    
-                    <input class="form-control" v-model="mobile_number" v-bind:placeholder="mobile_placeholder" />
-                    
-                    <hr />
-                    
-
-						An incredibly simple tool to find out what network your mobile number is. 
-						                    
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modal">Analyze</button>    
+                    </div>
                 </div>
             </div>
+                    
+                    <br />
+                    
+                    <h4 class="text-center">
+                        <span class="badge bg-inverse">
+                            <span class="glyphicon glyphicon-envelope"></span>{{ app_contact }}
+                        </span>
+                    </h4>
             
         </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+              </div>
+              <div class="modal-body">
+                  <h1 class="text-center">{{ message }}</h1>
+              </div>
+              <div class="modal-footer text-center">
+                <button type="button" class="btn btn-warning" data-dismiss="modal"><strong>Close</strong></button>
+              </div>
+            </div>
+          </div>
+        </div>        
         
     </div>
     

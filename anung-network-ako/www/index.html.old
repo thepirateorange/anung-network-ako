@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	
+	<title>Anung Network Ako</title>
+	
+	<!-- CSS dependencies -->
+	<link rel="stylesheet" href="css/onsenui.css" />
+	<link rel="stylesheet" href="css/onsen-css-components-default.css" />
+	<link rel="stylesheet" href="css/onsen.css" />
+	<link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+	<div id="loader">
+		<strong></strong>
+	</div>
+	<!-- Menu -->
+	<ons-splitter id="mySplitter">
+		<ons-splitter-side side="left" width="220px" collapse swipeable>
+			<ons-page>
+				<ons-list>
+					<ons-list-item class="longdivider bottom-menu-item" tappable tap-background-color="#555" onclick="loadPage('home.html')">
+						Home
+					</ons-list-item>
+		
+					<ons-list-item class="longdivider bottom-menu-item" tappable tap-background-color="#555" onclick="loadPage('about.html')">
+						About
+					</ons-list-item>
+				</ons-list>
+			</ons-page>
+		</ons-splitter-side>
+		<ons-splitter-content page="home.html"></ons-splitter-content>
+	</ons-splitter>
+
+	<!-- Home Page -->
+	<ons-template id="home.html">
+		<ons-page modifier="full_bg">
+			<ons-toolbar>
+				<div class="left">
+					<ons-toolbar-button onclick="openMenu()">
+					<ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+					</ons-toolbar-button>
+				</div>
+				<div class="center">
+					Anung Network Ako
+				</div>
+			</ons-toolbar>
+
+			<ons-row style="height: calc(100% - 30px);width: calc(100% - 30px); text-align: center;background: rgba(0,0,0,.4); margin: 15px;" align="center">
+				<ons-col vertical-align="center">
+					<h2 style="color: white">Anung Network Ako?</h2>
+					<p><ons-input id="number" modifier="underbar" placeholder="11 Digit Mobile Number" float style="width: calc(100% - 30px); color: white" oninput="showNetwork($(this).val());"></ons-input></p>
+					<p><ons-button style="width: calc(100% - 30px)" onclick="showDialog()">SUBMIT</ons-button></p>
+					<p style="color: #f8f8f8; font-size: 13px;padding: 0 15px;">
+						An incredibly simple tool to find out what network your mobile number is. 
+						<u>Enter your 11-digit cellphone number (e.g. 09175134789) to get started.</u>
+					</p>
+				</ons-col>
+			</ons-row>
+		</ons-page>
+	</ons-template>
+
+	<!-- About Page -->
+	<ons-template id="about.html">
+		<ons-page modifier="full_bg">
+		
+			<ons-toolbar>
+			<div class="left">
+				<ons-toolbar-button onclick="openMenu()">
+				<ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+				</ons-toolbar-button>
+			</div>
+			
+			<div class="center">
+				About
+			</div>
+			</ons-toolbar>
+			
+			<ons-row style="margin-bottom:15px; min-height: calc(100% - 30px);width: calc(100% - 30px); text-align: justify;background: rgba(0,0,0,.4); margin: 15px;color: white;padding: 15px">
+				<ons-col>
+					<h2>App</h2>
+					
+					<p>
+						This application is provided as-is, free of charge. The sole purpose of the app is to provide a tool
+						for users to enter their mobile number and immediately find out which mobile network
+						it belongs to.
+						<br />
+						<br />
+						This is limited to philippine mobile networks only. should there be lacking numbers,
+						send an email to thepirateorange@gmail.com
+					</p>
+					
+					<h2>Disclaimer</h2>
+					
+					<p>
+						Neither this application nor its authors claim ownership of anything found in this app.
+						This is merely a free tool provided to users free of charge.
+					</p>
+				</ons-col
+			</ons-row>
+		</ons-page>
+	</ons-template>
+	<!-- End About Page -->
+	
+	<!-- Dialog -->
+	<ons-dialog id="dialog">
+		<div style="text-align: center; padding: 10px;">
+			<p id="network">
+				YOUR NETWORK IS: ...
+			<p>
+			
+			<p>
+				<ons-button onclick="document.getElementById('dialog').hide()">Close</ons-button>
+			</p>
+		</div>
+	</ons-dialog>	
+	<!-- End Dialog -->
+	
+	<!-- JS dependencies (order matters!) -->
+	<script src="js/onsenui.min.js"></script>
+
+	<!-- App init -->
+	<script>
+		function openMenu() {
+		  document.getElementById('mySplitter').left.open();
+		}
+
+		function loadPage(page) {
+		  var splitter = document.getElementById('mySplitter');
+		  splitter.content.load(page).then(function() {
+			splitter.left.close();
+		  });
+		}
+	</script>
+	
+	<!-- Cordova reference -->
+	<script src="cordova.js"></script>
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	
+	<!-- Script -->
+	<script type="text/javascript" src="js/bearzu.js"></script>
+	
+	<!-- Dialog -->
+	<script type="text/javascript">
+	var showDialog = function(id) {
+	  document.getElementById('dialog').show();
+	};	
+	</script>
+
+</body>
+</html>

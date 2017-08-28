@@ -1,0 +1,31 @@
+{
+  "name": "anung-network-ako-android",
+  "version": "1.0.0",
+  "description": "An app that identifies which network a mobile number belongs to. Currently only works in the philippines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thepirateorange/anung-network-ako.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thepirateorange/anung-network-ako/issues"
+  },
+  "homepage": "https://github.com/thepirateorange/anung-network-ako#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.2.1",
+    "laravel-mix": "^1.4.2",
+    "phonegap": "^7.0.0",
+    "tether": "^1.4.0",
+    "vue": "^2.4.2"
+  }
+}

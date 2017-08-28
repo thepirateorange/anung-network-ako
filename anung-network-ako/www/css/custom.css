@@ -1,0 +1,7 @@
+.page--full_bg__background {
+	background: url('../img/bg.jpeg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: white;
+}

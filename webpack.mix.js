@@ -18,7 +18,7 @@ mix.scripts([
     'node_modules/jquery/dist/jquery.min.js',              // jQuery
     'node_modules/tether/dist/js/tether.min.js',           // Tether
     'node_modules/bootstrap/dist/js/bootstrap.min.js',     // Bootstrap 4
-    'node_modules/vue/dist/vue.min.js',// Vue.js
+    'node_modules/vue/dist/vue.min.js',                    // Vue.js
     'src/js/mobilio.js',                                   // Mobilio
     'src/js/app.js'                                        // App Scripts
 ], directory + 'js/app.js');

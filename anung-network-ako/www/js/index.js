@@ -34,6 +34,16 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        admob.initAdmob("ca-app-pub-7493902804153672/1355800899","ca-app-pub-7493902804153672/7949129402");
+        document.addEventListener(admob.Event.onInterstitialReceive, this.onInterstitialReceive, false);
+        admob.cacheInterstitial();
+        
+        admob.isInterstitialReady(function(isReady){
+            if(isReady){
+                admob.showInterstitial();
+            }
+        });
+        admob.showBanner(admob.BannerSize.BANNER, admob.Position.BOTTOM_APP);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

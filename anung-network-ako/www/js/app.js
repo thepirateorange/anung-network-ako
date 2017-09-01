@@ -249,7 +249,7 @@ var data = {
     app_contact: "thepirateorange@gmail.com",
     message: mobilio.options.standby_message,
     mobile_placeholder: "Enter your number",
-    mobile_number: mobilio.analyze('')
+    mobile_number: ''
 }
 
 // Initiate Vue

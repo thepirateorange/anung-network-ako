@@ -249,17 +249,7 @@ var data = {
     app_contact: "thepirateorange@gmail.com",
     message: mobilio.options.standby_message,
     mobile_placeholder: "Enter your number",
-    'mobile_number': ''
-}
-
-var Child = {
-    template: `
-        <div class="form-group">
-            <label :for="identifier">{{ title }} | {{ identifier }}</label>
-            <input type="text" class="form-control" :name="identifier" :id="identifier" />
-        </div>
-    `,
-    props: ['identifier', 'title']
+    mobile_number: mobilio.analyze(val)
 }
 
 // Initiate Vue
@@ -271,12 +261,5 @@ var app = new Vue({
         'mobile_number': function(val, oldVal) {
             this.message = mobilio.analyze(val);
         }
-    },
-    
-    components: {
-        'my-component': Child
     }
 });
-
-
-

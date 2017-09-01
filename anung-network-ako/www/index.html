@@ -14,16 +14,9 @@
     
     <!-- App -->
     <div id="app">
+        
         <!-- Container -->
         <div class="container-fluid">
-        <div class="card">
-            TEST
-            <hr />
-            <my-component identifier="lel" title="wow"></my-component>
-        </div>
-        
-        <br />
-        
             <div class="card">
                 <div class="card-block">
                     <h1 class="text-center">{{ app_title }}</h1>
@@ -37,31 +30,31 @@
                     </div>
                 </div>
             </div>
-                    <br />
-                    
-                    <h4 class="text-center">
-                        <span class="badge bg-inverse">
-                            <span class="glyphicon glyphicon-envelope"></span>{{ app_contact }}
-                        </span>
-                    </h4>
             
+            <br />
+            
+            <h4 class="text-center">
+                <span class="badge bg-inverse">
+                    <span class="glyphicon glyphicon-envelope"></span>{{ app_contact }}
+                </span>
+            </h4>
         </div>
         
         <!-- Modal -->
         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-              </div>
-              <div class="modal-body">
-                  <h1 class="text-center">{{ message }}</h1>
-              </div>
-              <div class="modal-footer text-center">
-                <button type="button" class="btn btn-warning" data-dismiss="modal"><strong>Close</strong></button>
-              </div>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <h1 class="text-center">{{ message }}</h1>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal"><strong>Close</strong></button>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>        
+        </div> 
         
     </div>
     
